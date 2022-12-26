@@ -10,3 +10,106 @@
 section {
     padding-top: 5rem;
 }
+
+.gallery-img {
+    width: 100%;
+}
+
+#gallery .row > * {
+    padding: 0;
+}
+
+/* My Car Section */
+.kotak-mobil {
+    position: relative;
+    background-color: #0c6efd;
+    border-radius: 10px;
+    height: 500px;
+    transform-style: preserve-3d;
+}
+
+.kotak-mobil::before {
+    content: 'MY';
+    position: absolute;
+    color: #fff;
+    font-size: 6em;
+    font-weight: bold;
+    font-style: italic;
+    top: 30px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    opacity: 0;
+    transition: 0.5s;
+}
+.kotak-mobil:hover::before {
+    opacity: 0.2;
+}
+.kotak-mobil::after {
+    content: 'CAR';
+    position: absolute;
+    color: #fff;
+    font-size: 4.3em;
+    font-weight: bold;
+    font-style: italic;
+    top: 350px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    opacity: 0;
+    transition: 0.5s;
+}
+.kotak-mobil:hover::after {
+    opacity: 0.2;
+}
+
+.car-name {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    font-size: 2em;
+    opacity: 0;
+    transform: translate3d(0, 0, 50px);
+    transition: 0.5s;
+}
+.kotak-mobil:hover .car-name {
+    top: 20px;
+    opacity: 1;
+}
+
+.car-detail-button {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate3d(-50%, 0, 110px);
+    opacity: 0;
+    transition: 0.5s;
+    z-index: 3;
+}
+.kotak-mobil:hover .car-detail-button {
+    opacity: 1;
+    bottom: 20px;
+}
+
+.car-img {
+    position: absolute;
+    max-width: 350px;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -52%, 100px);
+    transition: 0.5s;
+}
+.kotak-mobil:hover .car-img {
+    transform: translate3d(-50%, -52%, 100px) rotate(-3deg) scale(1.1);
+}
+
+
+
+
+
+
+
+
+
+
+
